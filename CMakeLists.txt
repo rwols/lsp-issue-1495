@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.18)
+project(issue-1495 VERSION 1.0.0 LANGUAGES CXX)
+find_package(GTest REQUIRED)
+add_executable(foo main.cpp)
+target_link_libraries(foo GTest::GTest)
+target_compile_features(foo PRIVATE cxx_std_17)
